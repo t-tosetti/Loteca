@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--MegaSena-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="MegaSenaViewController" customModule="Loteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkd-02-w3R">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="8Dz-tt-1h4"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7I-Mm-fwG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.68685630029719213" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="y75-C7-2H4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="🍀 Sena 🍀">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="y75-C7-2H4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="y75-C7-2H4"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="megaSorteio:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Heu-TW-aku"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nkd-02-w3R" secondAttribute="trailing" constant="-20" id="3hL-KV-XSc"/>
+                            <constraint firstItem="M7I-Mm-fwG" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="5DH-gx-O0x"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="M7I-Mm-fwG" secondAttribute="bottom" constant="8" id="jWz-5I-wgR"/>
+                            <constraint firstItem="nkd-02-w3R" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="mU2-2d-dy2"/>
+                            <constraint firstItem="nkd-02-w3R" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="n4b-Yp-EL0"/>
+                            <constraint firstItem="M7I-Mm-fwG" firstAttribute="top" secondItem="nkd-02-w3R" secondAttribute="bottom" constant="69" id="wNP-M1-NeN"/>
+                            <constraint firstItem="M7I-Mm-fwG" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="wPz-MA-VVd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nkd-02-w3R"/>
+                                <exclude reference="M7I-Mm-fwG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="jWz-5I-wgR"/>
+                                <exclude reference="3hL-KV-XSc"/>
+                                <exclude reference="mU2-2d-dy2"/>
+                                <exclude reference="n4b-Yp-EL0"/>
+                                <exclude reference="5DH-gx-O0x"/>
+                                <exclude reference="wNP-M1-NeN"/>
+                                <exclude reference="wPz-MA-VVd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="nkd-02-w3R"/>
+                                <include reference="M7I-Mm-fwG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="jWz-5I-wgR"/>
+                                <include reference="3hL-KV-XSc"/>
+                                <include reference="mU2-2d-dy2"/>
+                                <include reference="n4b-Yp-EL0"/>
+                                <include reference="5DH-gx-O0x"/>
+                                <include reference="wNP-M1-NeN"/>
+                                <include reference="wPz-MA-VVd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MegaSena" image="sena" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="megaDisplay" destination="nkd-02-w3R" id="Wzz-i3-RLs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="861"/>
+        </scene>
+        <!--Quina-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="QuinaViewController" customModule="Loteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moD-Q3-UAb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.6868563003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KWd-8P-ZUj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="🍀 Quina 🍀">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KWd-8P-ZUj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KWd-8P-ZUj"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="quinaSorteio:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="KR9-Gf-321"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHG-wT-YaI">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="z4b-Xl-WeM"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zHG-wT-YaI" secondAttribute="trailing" constant="-20" id="0kN-Uo-AUz"/>
+                            <constraint firstItem="zHG-wT-YaI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="QYu-af-OAM"/>
+                            <constraint firstItem="zHG-wT-YaI" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="cAb-a1-Hm9"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="moD-Q3-UAb" secondAttribute="bottom" constant="8" id="mzm-hj-GQx"/>
+                            <constraint firstItem="moD-Q3-UAb" firstAttribute="top" secondItem="zHG-wT-YaI" secondAttribute="bottom" constant="69" id="uQZ-8q-Y4a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="moD-Q3-UAb" secondAttribute="trailing" id="uRN-ST-kTK"/>
+                            <constraint firstItem="moD-Q3-UAb" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="ufQ-6O-cEK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="moD-Q3-UAb"/>
+                                <exclude reference="zHG-wT-YaI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="mzm-hj-GQx"/>
+                                <exclude reference="0kN-Uo-AUz"/>
+                                <exclude reference="QYu-af-OAM"/>
+                                <exclude reference="cAb-a1-Hm9"/>
+                                <exclude reference="uQZ-8q-Y4a"/>
+                                <exclude reference="uRN-ST-kTK"/>
+                                <exclude reference="ufQ-6O-cEK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="moD-Q3-UAb"/>
+                                <include reference="zHG-wT-YaI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="mzm-hj-GQx"/>
+                                <include reference="0kN-Uo-AUz"/>
+                                <include reference="QYu-af-OAM"/>
+                                <include reference="cAb-a1-Hm9"/>
+                                <include reference="uQZ-8q-Y4a"/>
+                                <include reference="uRN-ST-kTK"/>
+                                <include reference="ufQ-6O-cEK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Quina" image="quina" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="quinaDisplay" destination="zHG-wT-YaI" id="jdP-81-F57"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="861"/>
+        </scene>
+        <!--LotoFácil-->
+        <scene sceneID="hUP-5u-cDq">
+            <objects>
+                <viewController id="jDq-QG-nSk" customClass="LotoFacilViewController" customModule="Loteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GPP-sf-xpO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ytK-cW-aSK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ljl-hn-D7a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg5-Y6-1lG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.6868563003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e6A-4Z-CDp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="🍀 Loto 🍀">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="e6A-4Z-CDp"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="e6A-4Z-CDp"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="lotoSorteio:" destination="jDq-QG-nSk" eventType="touchUpInside" id="wQb-mz-bcq"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNz-2N-ync">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jDq-QG-nSk" id="Lch-Gk-nqd"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eNz-2N-ync" firstAttribute="top" secondItem="GPP-sf-xpO" secondAttribute="bottom" constant="8" id="BAK-PJ-1ug"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eNz-2N-ync" secondAttribute="trailing" constant="-20" id="C1e-QF-Ok2"/>
+                            <constraint firstItem="gg5-Y6-1lG" firstAttribute="trailing" secondItem="Ljl-hn-D7a" secondAttribute="trailingMargin" id="CST-L7-MSC"/>
+                            <constraint firstItem="eNz-2N-ync" firstAttribute="leading" secondItem="Ljl-hn-D7a" secondAttribute="leadingMargin" constant="-20" id="IFF-pI-Z9s"/>
+                            <constraint firstItem="gg5-Y6-1lG" firstAttribute="top" secondItem="eNz-2N-ync" secondAttribute="bottom" constant="69" id="M1n-4J-ajf"/>
+                            <constraint firstItem="ytK-cW-aSK" firstAttribute="top" secondItem="gg5-Y6-1lG" secondAttribute="bottom" constant="8" id="bI2-hE-KeH"/>
+                            <constraint firstItem="gg5-Y6-1lG" firstAttribute="leading" secondItem="Ljl-hn-D7a" secondAttribute="leadingMargin" id="lKB-cU-H8H"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gg5-Y6-1lG"/>
+                                <exclude reference="eNz-2N-ync"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BAK-PJ-1ug"/>
+                                <exclude reference="C1e-QF-Ok2"/>
+                                <exclude reference="IFF-pI-Z9s"/>
+                                <exclude reference="bI2-hE-KeH"/>
+                                <exclude reference="CST-L7-MSC"/>
+                                <exclude reference="M1n-4J-ajf"/>
+                                <exclude reference="lKB-cU-H8H"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="gg5-Y6-1lG"/>
+                                <include reference="eNz-2N-ync"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BAK-PJ-1ug"/>
+                                <include reference="C1e-QF-Ok2"/>
+                                <include reference="IFF-pI-Z9s"/>
+                                <include reference="bI2-hE-KeH"/>
+                                <include reference="CST-L7-MSC"/>
+                                <include reference="M1n-4J-ajf"/>
+                                <include reference="lKB-cU-H8H"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LotoFácil" image="lotoFacil" id="y02-Ho-Frr"/>
+                    <connections>
+                        <outlet property="lotoDisplay" destination="eNz-2N-ync" id="uya-i2-bRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7a-gU-H0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="861"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="jDq-QG-nSk" kind="relationship" relationship="viewControllers" id="KQC-BV-skJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lotoFacil" width="40" height="40"/>
+        <image name="quina" width="40" height="40"/>
+        <image name="sena" width="40" height="40"/>
+    </resources>
+</document>
